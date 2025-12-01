@@ -1,0 +1,587 @@
+/* ========================================
+   Homespace Landing Page Styles
+   ======================================== */
+
+/* CSS Variables */
+:root {
+  --color-primary: #FF7700;
+  --color-blue: #0070F3;
+  --color-purple: #7B1CF7;
+  --color-green: #06DF79;
+  --color-dark: #1D1D1F;
+  --color-dark-hover: #333335;
+  --color-subtext: #7D7D7F;
+  --color-outline: rgba(29, 29, 31, 0.2);
+  --color-bg: #FAFAFA;
+  --color-bg-gray: #EAEAEA;
+  --color-white: #FFFFFF;
+  
+  --font-primary: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-rasa: 'Rasa', serif;
+  
+  --container-width: 1128px;
+  --section-padding: 156px;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid var(--color-outline);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-sm {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.btn-lg {
+  height: 64px;
+  padding: 0 32px;
+  font-size: 24px;
+  border-radius: 16px;
+}
+
+.btn-dark {
+  background-color: var(--color-dark-hover);
+  color: var(--color-white);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-dark);
+}
+
+.btn-light {
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+}
+
+.btn-light:hover {
+  background-color: var(--color-white);
+}
+
+.apple-icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 3px;
+}
+
+.btn-lg .apple-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+/* Header / Navigation */
+.header {
+  padding: 32px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-text {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.408px;
+  color: var(--color-dark);
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 0 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.hero-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.14;
+  color: var(--color-dark);
+  margin-top: -24px;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-subtext);
+  margin-top: -24px;
+}
+
+.hero-image {
+  margin-top: 0;
+  width: 473px;
+  max-width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Trust Section */
+.trust {
+  padding: 80px 0 96px;
+}
+
+.trust-label {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-subtext);
+  margin-bottom: 40px;
+}
+
+.trust-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.trust-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.trust-logo-blend {
+  mix-blend-mode: multiply;
+}
+
+.trust-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #6b6b6b;
+}
+
+.furnacely-name {
+  font-family: var(--font-rasa);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.furnacely-tagline {
+  font-family: var(--font-rasa);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Feature Sections */
+.feature {
+  padding: 200px 0 0;
+}
+
+.feature-last {
+  padding-bottom: 200px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.feature-grid-reverse {
+  direction: rtl;
+}
+
+.feature-grid-reverse > * {
+  direction: ltr;
+}
+
+.feature-image img {
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+}
+
+.feature-image-tall img {
+  max-width: 450px;
+}
+
+.feature-content {
+  max-width: 440px;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 13px;
+}
+
+.feature-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 36px;
+}
+
+.feature-subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.33;
+  margin-bottom: 8px;
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 16px;
+}
+
+.feature-list::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background-color: #D5D5D6;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 0;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #EAEAEA;
+  border: 1px solid #1D1D1F;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  order: 1;
+}
+
+/* CTA Section */
+.cta {
+  background-color: var(--color-dark);
+  padding: 200px 0;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.14;
+  color: var(--color-bg);
+}
+
+.cta-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-bg);
+  margin-top: -24px;
+}
+
+/* Footer */
+.footer {
+  padding: 80px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-dark);
+  letter-spacing: -0.408px;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-subtext);
+}
+
+.footer-divider {
+  width: 1px;
+  height: 16px;
+  background-color: var(--color-subtext);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 80px;
+  }
+  
+  .hero-title {
+    font-size: 44px;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .feature-grid {
+    gap: 48px;
+  }
+  
+  .feature-title {
+    font-size: 32px;
+  }
+  
+  .cta-title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 0;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .btn-lg {
+    height: 56px;
+    padding: 0 24px;
+    font-size: 18px;
+  }
+  
+  .trust-logos {
+    justify-content: center;
+  }
+  
+  .trust-logo {
+    height: 60px;
+  }
+  
+  .feature {
+    padding: 80px 0 0;
+  }
+  
+  .feature-last {
+    padding-bottom: 80px;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .feature-grid-reverse {
+    direction: ltr;
+  }
+  
+  .feature-image {
+    order: -1;
+  }
+  
+  .feature-image img,
+  .feature-image-tall img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .feature-content {
+    max-width: 100%;
+  }
+  
+  .feature-title {
+    font-size: 28px;
+  }
+  
+  .feature-subtitle {
+    font-size: 20px;
+  }
+  
+  .cta {
+    padding: 80px 0;
+  }
+  
+  .cta-title {
+    font-size: 32px;
+  }
+  
+  .cta-subtitle {
+    font-size: 18px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .hero-content {
+    gap: 24px;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .hero-icon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .hero-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .furnacely-name {
+    font-size: 28px;
+  }
+  
+  .feature-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .cta-title {
+    font-size: 28px;
+  }
+}
+
